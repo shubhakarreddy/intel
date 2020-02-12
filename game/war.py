@@ -63,6 +63,10 @@ class War:
         return self.result
 
     def _war(self, cards):
+        '''
+        Players are at war and will keep playing until one wins or they run
+        out of cards
+        '''
         while cards[-1] == cards[-2] and len(self.player_1) > 1 and len(self.player_2) > 1:
             # cards placed face-down
             cards += [self.player_1.play(), self.player_2.play()]
@@ -78,6 +82,14 @@ class War:
             self._break_tie()
 
     def _break_tie(self):
+        '''
+        This function is used when the players are in war and at least one of them
+        ran out of cards
+        Three scenarios:
+            - Both have one card: Tie!
+            - Player_2 ran out of cards: Player_1 won
+            - Player_1 "           "   : Player_2 won
+        '''
         if len(self.player_1) == 1 and len(self.player_2) == 1:
             # Reached a tie
             self._set_result("It's a tie!")
