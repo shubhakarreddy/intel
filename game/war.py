@@ -4,7 +4,7 @@
 
 import random
 import time
-import war.player as player
+import game.player as player
 
 class War:
     def __init__(self, verbose_output=False):

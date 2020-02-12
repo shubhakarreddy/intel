@@ -1,4 +1,4 @@
-from war.player import Player
+from game.player import Player
 import unittest
 
 class PlayerTestCase(unittest.TestCase):

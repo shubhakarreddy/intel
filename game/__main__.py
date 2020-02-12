@@ -1,5 +1,5 @@
 import getopt, sys
-import war
+import game.war as war
 
 def parse_args():
     try:

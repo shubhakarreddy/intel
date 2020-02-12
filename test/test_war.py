@@ -1,5 +1,5 @@
 import unittest
-from war.war import War
+from game.war import War
 
 class WarTestCase(unittest.TestCase):
     def setUp(self):
