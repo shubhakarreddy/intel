@@ -4,7 +4,7 @@
 
 import random
 import time
-import player
+import war.player as player
 
 class War:
     def __init__(self, verbose_output=False):
@@ -26,9 +26,6 @@ class War:
 
         self.player_1.add_cards(cards[:len(cards)//2])
         self.player_2.add_cards(cards[len(cards)//2:])
-
-    def set_verbose_output(self):
-        self.verbose_output = True
 
     def run(self):
         '''
